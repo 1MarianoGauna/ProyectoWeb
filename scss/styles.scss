@@ -1,0 +1,190 @@
+//***********************************Variables******************************************//
+$letras: white;
+//***********************************Fin de variables**********************************//
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: linear-gradient(to bottom, #212529, #343A40, #495057);
+    color: $letras;
+}
+
+h1{
+    text-align: center;
+    color: #7C6B6B;
+    padding: 75px;
+
+}
+
+.navHeader__menu{
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    flex-wrap: wrap;
+    
+    .menu__item{
+        width: 100px;
+    }
+    .menu__item:hover{
+        background-color: #485648;
+        transform: scale(1.1);
+        transition: 1s;
+    }
+}
+
+.listNone{
+    list-style: none;
+    color: $letras;
+}
+a{
+    text-decoration: none;
+    color: $letras;
+}
+a:hover{
+    color: $letras;
+}
+.mainIndex{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 10px;
+
+    .mainIndex__section{
+    justify-self: center;
+    }
+    .mainIndex__aside{
+    justify-self: start;
+    }
+}
+
+img{
+    max-width: 500px;
+}
+
+h2{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.navFooter__menu{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .menu__item{
+    width: 100px;
+    }
+}
+.icon_footer{
+    font-size: 30px;
+}
+.icon_footer:hover{
+    transform: scale(2,2);
+    color: #788491;
+}
+
+.proyectoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 100px;
+    .proyecto__texto{
+        padding: 50px;
+    }
+}
+
+.formularioContacto{
+    display: flex;
+    justify-content: center;
+}
+p{
+    color: $letras;
+}
+
+
+.hobbieContainer{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.habilidadSection{
+    margin-bottom: 100px;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+}
+.carousel__hobbie{
+    display: flex;
+    justify-content: center;
+}
+//**********************Comienzo iconos de tabla*******************************************************************************************//
+.icon_table{
+    font-size: 50px;
+    color: #7C6B6B;
+}
+.icon_table-js{
+    color: yellow;
+}
+.icon_table-react{
+     color: aqua;
+}
+.icon_table-html{
+    color: orangered;
+}
+.icon_table-css{
+    color: rgb(61, 61, 255);
+}
+//************************************************Fin iconos de tabla***********************************************************************//
+
+
+//****************************************************************************MEDIAS QUERIES****************************************************************************//
+@media only screen and (max-width: 480px) {
+    .h1-container    {
+        text-align: center;
+        font-weight: 100px;
+        font-size: 30px;
+        width: 100%;
+    }
+    .navHeader__menu {
+        justify-content: center;
+    }
+    .mainIndex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .index__img{
+        width: 100%;
+    }
+    .navFooter__menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .hobbie__img{
+        width: 100%;
+    }
+    .proyectoContainer{
+        width: 100%;
+        .proyecto__img{
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .mainIndex {
+        display: flex;
+        flex-direction: column;
+    }
+}
