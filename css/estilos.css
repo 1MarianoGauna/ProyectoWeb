@@ -129,7 +129,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center; }
-  .index__img {
+  .mainIndex__img {
     width: 100%; }
   .navFooter__menu {
     display: flex;
