@@ -1,5 +1,6 @@
 //***********************************Variables******************************************//
 $letras: white;
+$alturaLetras: 3vh;
 //***********************************Fin de variables**********************************//
 
 *{
@@ -36,7 +37,6 @@ h1{
         transition: 1s;
     }
 }
-
 .listNone{
     list-style: none;
     color: $letras;
@@ -51,13 +51,22 @@ a:hover{
 .mainIndex{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-bottom: 10px;
+    padding-bottom: 50px;
 
     .mainIndex__section{
     justify-self: center;
     }
     .mainIndex__aside{
     justify-self: start;
+    }
+    .mainIndex__parrafo{
+        font-size: 3vh;
+        text-align: center;
+        padding-right: 50px;
+        padding-top: 120px;
+    }
+    .mainIndex__img{
+        border-radius: 50%;
     }
 }
 
@@ -66,6 +75,7 @@ img{
 }
 
 h2{
+    font-size: 4vh;
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
@@ -93,20 +103,34 @@ h2{
     justify-content: center;
     text-align: center;
     padding-bottom: 100px;
-    .proyecto__texto{
+    .proyectoContainer__texto{
         padding: 50px;
+        font-size: $alturaLetras;
     }
 }
 
 .formularioContacto{
     display: flex;
     justify-content: center;
+    input{
+        animation: actionForm 3s;
+    }
+    select{
+        @extend input;
+    }
+    textarea{
+        @extend input;
+    }
+    button{
+        @extend input;
+
+    }
 }
+
 p{
     color: $letras;
+    font-size: $alturaLetras;
 }
-
-
 .hobbieContainer{
     display: flex;
     flex-flow: column wrap;
@@ -144,8 +168,19 @@ p{
     color: rgb(61, 61, 255);
 }
 //************************************************Fin iconos de tabla***********************************************************************//
-
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------//
+//*************************************************COMIENZO ANIMACIONES*********************************************************************//
+@keyframes actionForm{
+    0%{
+    }
+    50%{
+        background-color: #7C6B7C;
+    }
+    100%{
+    }
+}
+//******************************************************FIN ANIMACIONES***********************************************************************************//
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------//
 //****************************************************************************MEDIAS QUERIES****************************************************************************//
 @media only screen and (max-width: 480px) {
     .h1-container    {
@@ -161,6 +196,10 @@ p{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0;
+        .mainIndex__parrafo{
+            padding: 0;
+        }
     }
     .mainIndex__img{
         width: 100%;
@@ -175,15 +214,37 @@ p{
     }
     .proyectoContainer{
         width: 100%;
-        .proyecto__img{
+        .proyectoContainer__img{
             width: 100%;
         }
     }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    .navHeader__menu{
+        justify-content: space-around;
+    }
     .mainIndex {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        .mainIndex__parrafo{
+            padding: 0;
+        }
     }
+    .hobbieContainer{
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 900px){
+    .mainIndex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .mainIndex__parrafo{
+            text-align: center;
+        }
+    }
+
 }

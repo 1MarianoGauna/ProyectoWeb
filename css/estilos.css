@@ -39,16 +39,24 @@ a:hover {
 .mainIndex {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-bottom: 10px; }
+  padding-bottom: 50px; }
   .mainIndex .mainIndex__section {
     justify-self: center; }
   .mainIndex .mainIndex__aside {
     justify-self: start; }
+  .mainIndex .mainIndex__parrafo {
+    font-size: 3vh;
+    text-align: center;
+    padding-right: 50px;
+    padding-top: 120px; }
+  .mainIndex .mainIndex__img {
+    border-radius: 50%; }
 
 img {
   max-width: 500px; }
 
 h2 {
+  font-size: 4vh;
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center; }
@@ -74,15 +82,19 @@ h2 {
   justify-content: center;
   text-align: center;
   padding-bottom: 100px; }
-  .proyectoContainer .proyecto__texto {
-    padding: 50px; }
+  .proyectoContainer .proyectoContainer__texto {
+    padding: 50px;
+    font-size: 3vh; }
 
 .formularioContacto {
   display: flex;
   justify-content: center; }
+  .formularioContacto input, .formularioContacto select, .formularioContacto textarea, .formularioContacto button {
+    animation: actionForm 3s; }
 
 p {
-  color: white; }
+  color: white;
+  font-size: 3vh; }
 
 .hobbieContainer {
   display: flex;
@@ -117,6 +129,12 @@ p {
 .icon_table-css {
   color: #3d3dff; }
 
+@keyframes actionForm {
+  0% { }
+  50% {
+    background-color: #7C6B7C; }
+  100% { } }
+
 @media only screen and (max-width: 480px) {
   .h1-container {
     text-align: center;
@@ -128,7 +146,10 @@ p {
   .mainIndex {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    padding: 0; }
+    .mainIndex .mainIndex__parrafo {
+      padding: 0; }
   .mainIndex__img {
     width: 100%; }
   .navFooter__menu {
@@ -139,10 +160,25 @@ p {
     width: 100%; }
   .proyectoContainer {
     width: 100%; }
-    .proyectoContainer .proyecto__img {
+    .proyectoContainer .proyectoContainer__img {
       width: 100%; } }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
+  .navHeader__menu {
+    justify-content: space-around; }
   .mainIndex {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column;
+    align-items: center; }
+    .mainIndex .mainIndex__parrafo {
+      padding: 0; }
+  .hobbieContainer {
+    display: flex; } }
+
+@media only screen and (min-width: 769px) and (max-width: 900px) {
+  .mainIndex {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .mainIndex .mainIndex__parrafo {
+      text-align: center; } }
