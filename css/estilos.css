@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  color: white; }
 
 body {
   background: linear-gradient(to bottom, #212529, #343A40, #495057);
@@ -38,24 +39,23 @@ a:hover {
 
 .mainIndex {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-bottom: 50px; }
-  .mainIndex .mainIndex__section {
+  grid-template-columns: 50% 40% 10%;
+  align-items: center;
+  padding-bottom: 5%; }
+  .mainIndex .mainIndex__encabezado {
+    grid-column: 1/4;
     justify-self: center; }
-  .mainIndex .mainIndex__aside {
-    justify-self: start; }
-  .mainIndex .mainIndex__parrafo {
-    font-size: 3vh;
-    text-align: center;
-    padding-right: 50px;
-    padding-top: 120px; }
+  .mainIndex .mainIndex__image {
+    justify-self: center; }
   .mainIndex .mainIndex__img {
     border-radius: 50%; }
+  .mainIndex .mainIndex__aside {
+    justify-self: end; }
 
 img {
   max-width: 500px; }
 
-h2 {
+.mainEncabezado, .mainIndex__encabezado {
   font-size: 4vh;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -93,7 +93,6 @@ h2 {
     animation: actionForm 3s; }
 
 p {
-  color: white;
   font-size: 3vh; }
 
 .hobbieContainer {

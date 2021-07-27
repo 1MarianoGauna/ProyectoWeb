@@ -8,6 +8,7 @@ $alturaLetras: 3vh;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    color: $colorLetras;
 }
 
 body{
@@ -50,35 +51,34 @@ a:hover{
 }
 .mainIndex{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-bottom: 50px;
-
-    .mainIndex__section{
-    justify-self: center;
+    grid-template-columns: 50% 40% 10%;
+    align-items: center;
+    padding-bottom: 5%;
+    .mainIndex__encabezado{
+        grid-column: 1/4;
+        justify-self: center;
     }
-    .mainIndex__aside{
-    justify-self: start;
-    }
-    .mainIndex__parrafo{
-        font-size: 3vh;
-        text-align: center;
-        padding-right: 50px;
-        padding-top: 120px;
+    .mainIndex__image{
+        justify-self: center;
     }
     .mainIndex__img{
         border-radius: 50%;
     }
+    .mainIndex__aside{
+        justify-self: end;
+    }
 }
-
 img{
     max-width: 500px;
 }
-
-h2{
+.mainEncabezado{
     font-size: 4vh;
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
+}
+.mainIndex__encabezado{
+    @extend .mainEncabezado
 }
 .navFooter__menu{
     display: flex;
@@ -128,7 +128,6 @@ h2{
 }
 
 p{
-    color: $colorLetras;
     font-size: $alturaLetras;
 }
 .hobbieContainer{
