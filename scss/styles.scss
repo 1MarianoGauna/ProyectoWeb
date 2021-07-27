@@ -1,5 +1,5 @@
 //***********************************Variables******************************************//
-$letras: white;
+$colorLetras: white;
 $alturaLetras: 3vh;
 //***********************************Fin de variables**********************************//
 
@@ -12,7 +12,7 @@ $alturaLetras: 3vh;
 
 body{
     background: linear-gradient(to bottom, #212529, #343A40, #495057);
-    color: $letras;
+    color: $colorLetras;
 }
 
 h1{
@@ -39,14 +39,14 @@ h1{
 }
 .listNone{
     list-style: none;
-    color: $letras;
+    color: $colorLetras;
 }
 a{
     text-decoration: none;
-    color: $letras;
+    color: $colorLetras;
 }
 a:hover{
-    color: $letras;
+    color: $colorLetras;
 }
 .mainIndex{
     display: grid;
@@ -128,7 +128,7 @@ h2{
 }
 
 p{
-    color: $letras;
+    color: $colorLetras;
     font-size: $alturaLetras;
 }
 .hobbieContainer{
